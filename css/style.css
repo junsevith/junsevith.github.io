@@ -296,6 +296,10 @@ header {
   border-bottom: #999999 dashed 1px;
 }
 
+summary {
+  white-space: nowrap;
+}
+
 .space {
   border-bottom: 0 !important;
 }
