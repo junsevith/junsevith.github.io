@@ -261,7 +261,7 @@ html, body {
 
 .wrapper {
   min-height: 100dvh;
-  padding: 100px 200px;
+  padding: 50px 200px;
   display: flex;
   flex-direction: column;
 }
@@ -278,7 +278,7 @@ header {
 }
 
 .content {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
 }
 
@@ -293,6 +293,11 @@ header {
 
 .navbar li {
   white-space: nowrap;
+  border-bottom: #999999 dashed 1px;
+}
+
+.space {
+  border-bottom: 0 !important;
 }
 
 .navbar {
@@ -305,6 +310,78 @@ header {
 }
 
 
+i {
+  min-width: 20px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.footer {
+  text-align: center;
+}
+
+#introvert {
+  font-family: "Iosevka Extrabold Extended", serif;
+  font-style: italic;
+}
+
+li + li {
+  margin-top: 5px;
+}
+
+.part {
+  display: flex;
+  flex-direction: row;
+}
+
+figure {
+  text-align: center;
+}
+
+#riddle {
+  width: 15dvw;
+}
+
+details summary::marker {
+  content: none;
+}
+
+details summary {
+  content: none;
+}
+
+details:not([open]) summary span {
+  display: none;
+}
+
+summary {
+  cursor: pointer;
+}
+
+.navbar {
+  border-right: #222222 solid 2px;
+  /*border-radius: 10px;*/
+}
+.kod {
+  /*color: crimson;*/
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: #555555 solid 1px;
+  font-size: 105%;
+  text-align: left;
+  padding: 10px;
+  overflow: scroll;
+  max-width: 40dvw;
+}
+
+@media only screen and (max-width: 1500px) {
+  .wrapper {
+    padding: 50px 10px;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
 
   .wrapper {
@@ -314,12 +391,26 @@ header {
     flex-direction: column;
   }
 
-}
+  .part {
+    flex-direction: column;
+  }
 
-i {
-  min-width: 20px;
-}
+  #riddle {
+    width: 50dvw;
+  }
 
-h1 {
-  font-size: 3em;
+  details:not([open]) summary span {
+    display: inline;
+  }
+
+  .navbar {
+    /*border-right: none;*/
+    border: #555555 solid 1px;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .kod {
+    max-width: none;
+  }
 }
