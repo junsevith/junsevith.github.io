@@ -250,7 +250,7 @@ textarea {
   box-sizing: border-box;
 }
 
-html {
+body {
   background-image: url("../img/background.png");
   background-size: cover;
 }
@@ -387,7 +387,11 @@ figure img {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+
+  header i {
+    display: none !important;
+  }
 
   figure img {
     max-width: 60dvw;
