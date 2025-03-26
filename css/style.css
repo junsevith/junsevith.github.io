@@ -315,7 +315,7 @@ i {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .footer {
@@ -384,6 +384,10 @@ figure img {
 }
 
 @media only screen and (max-width: 1000px) {
+
+  h1 {
+  font-size: 3em;
+  }
 
   .wrapper {
     padding: 10px;
