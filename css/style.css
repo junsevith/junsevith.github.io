@@ -373,7 +373,7 @@ summary {
 }
 
 figure img {
-  max-width: 30dvh;
+  max-width: 20dvw;
   border-radius: 10px;
 }
 
@@ -384,6 +384,15 @@ figure img {
 }
 
 @media only screen and (max-width: 1000px) {
+
+  figure img {
+    max-width: 60dvw;
+  }
+
+  figure {
+    padding: 0;
+    margin: 10px 0;
+  }
 
   h1 {
   font-size: 2em;
