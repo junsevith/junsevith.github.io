@@ -10,13 +10,13 @@
     display: none !important;
   }
 
-  figure img {
-    max-width: 60dvw;
-  }
-
   figure {
     padding: 0;
     margin: 10px 0;
+
+    img {
+      max-width: 60dvw;
+    }
   }
 
   h1 {
