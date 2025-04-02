@@ -4,7 +4,20 @@
     padding: 50px 10px;
   }
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+  header i {
+    display: none !important;
+  }
+  figure img {
+    max-width: 60dvw;
+  }
+  figure {
+    padding: 0;
+    margin: 10px 0;
+  }
+  h1 {
+    font-size: 2em;
+  }
   .wrapper {
     padding: 10px;
   }
@@ -138,6 +151,7 @@ details summary::marker {
 details summary {
   content: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 details:not([open]) summary span {
   display: none;

@@ -136,6 +136,7 @@ details {
   summary {
     content: none;
     cursor: pointer;
+    white-space: nowrap;
   }
 
   &:not([open]) summary span {
