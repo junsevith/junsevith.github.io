@@ -22,6 +22,15 @@
   <meta name="theme-color" content="#fafafa">
 
   <script src="https://kit.fontawesome.com/9a950cbbce.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/rust.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/kotlin.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -34,7 +43,7 @@
 
     <main class="content">
       <nav class="navbar">
-        <details>
+        <details open>
           <summary>
             <i class="fa-solid fa-bars"></i> <span>Navigation</span>
           </summary>
@@ -42,8 +51,9 @@
             <li><i class="fa-solid fa-house"></i> <a href="index.html">Home</a></li>
             <li><i class="fa-solid fa-computer"></i> <a href="it.html">Interests (IT)</a></li>
             <li><i class="fa-solid fa-music"></i> <a href="interests.html">Interests (Other)</a></li>
-            <li><i class="fa-solid fa-clipboard"></i> <a href="projects.html">Projects</a></li>
-            <li><i class="fa-solid fa-briefcase"></i> <a href="work.html">Work</a></li>
+            <li><i class="fa-solid fa-clipboard"></i> <a href="projects.html">Projects</a> </li>
+            <li><i class="fa-solid fa-briefcase"></i> <a href="work.html">Work</a> </li>
+            <li><i class="fa-solid fa-image"></i> <a href="gallery.html">Gallery</a> </li>
             <li class="space">&nbsp;</li>
             <li><i class="fa-solid fa-envelope"></i> <a
               href="mailto:pawelstanik44@gmail.com">pawelstanik44@gmail.com</a></li>
@@ -52,7 +62,6 @@
               href="https://www.linkedin.com/in/pawe%C5%82-stanik-30641028a/">LinkedIn</a></li>
           </ul>
         </details>
-
       </nav>
 
       <article class="desc">
@@ -84,8 +93,7 @@
             </p>
           </section>
           <figure>
-            <pre class="kod">
-let destination = variables.write(Value::Identifier(variable))?;
+            <pre class="kod"><code class="language-rust">let destination = variables.write(Value::Identifier(variable))?;
 let destination = self.prepare_pointer(destination, 1);
 
 self.action_stack.push(format!("{}", operation));
@@ -98,7 +106,7 @@ let second = self.prepare_pointer(second, 2);
 
 self.load(first);
 self.push(Instruction::Add(second));
-}</pre>
+}</code></pre>
             <figcaption>Small snippet of code from compiler</figcaption>
           </figure>
         </section>
@@ -124,8 +132,7 @@ self.push(Instruction::Add(second));
             </p>
           </section>
           <figure>
-            <pre class="kod">
-GoTile[][] tiles = board.getBoard();
+            <pre class="kod"><code class="language-java">GoTile[][] tiles = board.getBoard();
 for (int i = 0; i < board.getSize(); i++) {
   for (int j = 0; j < board.getSize(); j++) {
     GoTile current = tiles[i][j];
@@ -151,7 +158,7 @@ for (int i = 0; i < board.getSize(); i++) {
             }
           }
         }
-</pre>
+</code></pre>
             <figcaption>Small snippet of code of AI player from "game called go"</figcaption>
           </figure>
         </section>
@@ -179,8 +186,7 @@ for (int i = 0; i < board.getSize(); i++) {
             </p>
           </section>
           <figure>
-            <pre class="kod">
-val powerNetworkParts = neighbors.filterIsInstance/PowerNetworkPart/()
+            <pre class="kod"><code class="language-kotlin">val powerNetworkParts = neighbors.filterIsInstance/PowerNetworkPart/()
 
 val (somePowerGrid, noPowerGrid) = powerNetworkParts.partition
       { it.powerGrid != null }
@@ -197,8 +203,7 @@ if (powerGrids.isNotEmpty()){
         newPowerGrid.mergePowerGrids(it)
     }
     this.powerGrid = newPowerGrid
-  }
-</pre>
+  }</code></pre>
             <figcaption>Small snippet of code form the mod</figcaption>
           </figure>
         </section>
