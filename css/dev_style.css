@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
 /* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
@@ -387,6 +388,65 @@ figure img {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+#hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "LocalIosevka", serif;
+  padding-bottom: 20px;
+}
+
+#hamburger span {
+  display: none;
+}
+
+#hamburger.active span {
+  display: inline;
+}
+
+/* Styl dla małych ekranów */
+@media (max-width: 768px) {
+  #menu-list {
+    flex-direction: column;
+    gap: 10px;
+    max-height: 0;
+    opacity: 0;
+  }
+  #menu-list.active {
+    max-height: 500px; /* wystarczająco dużo na kilka elementów */
+    opacity: 1;
+  }
+  #hamburger {
+    display: block;
+  }
+}
+#menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden; /* ważne dla efektu przesuwania */
+}
+
+#menu {
+  display: none;
+}
+
+#menu-list {
+  flex-direction: column;
+  gap: 10px;
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+}
+
+#menu-list.active {
+  max-height: 500px; /* wystarczająco dużo na kilka elementów */
+  max-width: 100%;
+  opacity: 1;
+}
+
 @media only screen and (max-width: 1500px) {
   .wrapper {
     padding: 50px 10px !important;
@@ -426,6 +486,10 @@ figure img {
   }
   .kod {
     max-width: none;
+  }
+  .photo {
+    width: 100%;
+    height: 100%;
   }
 }
 

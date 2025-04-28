@@ -1,0 +1,62 @@
+#hamburger {
+  //display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "LocalIosevka", serif;
+  padding-bottom: 20px;
+}
+
+#hamburger span {
+  display: none;
+}
+
+#hamburger.active span {
+  display: inline;
+}
+
+/* Styl dla małych ekranów */
+@media (max-width: 768px) {
+  #menu-list {
+    flex-direction: column;
+    gap: 10px;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  #menu-list.active {
+    max-height: 500px; /* wystarczająco dużo na kilka elementów */
+    opacity: 1;
+  }
+
+  #hamburger {
+    display: block;
+  }
+}
+
+#menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  overflow: hidden; /* ważne dla efektu przesuwania */
+}
+
+#menu {
+  display: none;
+}
+
+#menu-list {
+  flex-direction: column;
+  gap: 10px;
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+}
+
+#menu-list.active {
+  max-height: 500px; /* wystarczająco dużo na kilka elementów */
+  max-width: 100%;
+  opacity: 1;
+}
