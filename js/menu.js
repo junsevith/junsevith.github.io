@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const menu = document.getElementById('menu');
-  menu.style.display = 'block';
+document.addEventListener("DOMContentLoaded", function () {
+  const menu = document.getElementById("menu");
+  menu.style.display = "block";
 
   // Generowanie dynamicznego menu
   menu.innerHTML = `
@@ -21,21 +21,21 @@ document.addEventListener('DOMContentLoaded', function () {
     </ul>
   `;
 
-  const hamburger = document.getElementById('hamburger');
-  const menuList = document.getElementById('menu-list');
+  const hamburger = document.getElementById("hamburger");
+  const menuList = document.getElementById("menu-list");
 
   // Obsługa kliknięcia w hamburgera
-  hamburger.addEventListener('click', function () {
-    menuList.classList.toggle('active');
-    hamburger.classList.toggle('active');
+  hamburger.addEventListener("click", function () {
+    menuList.classList.toggle("active");
+    hamburger.classList.toggle("active");
   });
 
   // Opcjonalnie: zamknij menu po kliknięciu w link
-  const links = menuList.querySelectorAll('a');
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      if (menuList.classList.contains('active')) {
-        menuList.classList.remove('active');
+  const links = menuList.querySelectorAll("a");
+  links.forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (menuList.classList.contains("active")) {
+        menuList.classList.remove("active");
       }
     });
   });

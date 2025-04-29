@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Paweł Stanik</title>
+  <title>Paweł Stanik - IT</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="">
 
@@ -20,7 +20,6 @@
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
-
   <script src="https://kit.fontawesome.com/9a950cbbce.js" crossorigin="anonymous"></script>
 </head>
 
@@ -29,14 +28,13 @@
 <div class="wrapper">
   <div class="main">
     <header>
-      <h1><img id="face" src="img/zdjęcie.png" alt="moja twarz"/>&nbsp;<i
-        class="fa-solid fa-arrow-left"></i> Paweł&nbsp;Stanik</h1>
+      <h1> Paweł&nbsp;Stanik</h1>
     </header>
 
     <main class="content">
       <noscript>
         <nav class="navbar">
-          <details open>
+          <details>
             <summary>
               <i class="fa-solid fa-bars"></i> <span>Navigation</span>
             </summary>
@@ -65,20 +63,19 @@
       </nav>
 
       <article class="desc">
-        <h2>Something about me</h2>
-        Hi there! My name is Paweł <small>[Paul]</small>  , I'm a computer science enthusiast, programmer, and a student. Here are some quick facts about me:
-        <ul>
-          <li>I'm a student of Algorithmic
-            Computer Science at <a href="https://pwr.edu.pl/">Wrocław university of science and technology</a></li>
-          <li>I'm currently employed as an Intern in <a href="https://www.schaeffler.pl/pl/">Schaeffler</a>, I work in SAP/ABAP development </li>
-          <li>I like creating things that work (bonus points if they work well)</li>
-          <li>My favourite programming language is <a href="https://www.rust-lang.org/">Rust</a></li>
-          <li>I love music</li>
-          <li>I also like playing games and reading</li>
-          <li>I ponder a lot (maybe too much for my own good)</li>
-          <li>I like medieval fantasy</li>
-          <li>I'm an <span id="introvert">introvert</span></li>
-        </ul>
+        <header><h2>The Hangman</h2></header>
+        <section class="part">
+          <div class="game-container">
+            <canvas id="hangman-canvas"></canvas>
+            <div id="word-container"></div>
+            <div id="keyboard"></div>
+            <div id="message"></div>
+            <div class="controls">
+              <button onclick="startGame()">Nowa gra</button>
+              <button onclick="cancelGame()">Anuluj</button>
+            </div>
+          </div>
+        </section>
       </article>
 
     </main>
@@ -89,12 +86,7 @@
   </div>
 </div>
 <script src="js/menu.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('hamburger').click();
-  });
-</script>
-
+<script src="js/hangman.js"></script>
 </body>
 
 </html>
