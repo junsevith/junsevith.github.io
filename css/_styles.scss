@@ -119,7 +119,10 @@ li + li {
 }
 
 .part {
-  @include flex(row)
+  @include flex(row);
+  .spacer {
+    flex: 1;
+  }
 }
 
 figure {
@@ -157,4 +160,8 @@ details {
 figure img {
   max-width: 30dvh;
   border-radius: 10px;
+}
+
+.desc {
+  flex: 1;
 }

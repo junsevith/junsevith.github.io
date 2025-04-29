@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <li><i class="fa-solid fa-clipboard"></i> <a href="projects.html">Projects</a> </li>
       <li><i class="fa-solid fa-briefcase"></i> <a href="work.html">Work</a> </li>
       <li><i class="fa-solid fa-image"></i> <a href="gallery.html">Gallery</a> </li>
+      <li><i class="fa-solid fa-gamepad"></i> <a href="hangman.html">Hangman</a></li>
       <li class="space">&nbsp;</li>
       <li><i class="fa-solid fa-envelope"></i> <a
         href="mailto:pawelstanik44@gmail.com">pawelstanik44@gmail.com</a></li>

@@ -308,6 +308,9 @@ li + li {
   display: flex;
   flex-direction: row;
 }
+.part .spacer {
+  flex: 1;
+}
 
 figure {
   text-align: center;
@@ -340,6 +343,10 @@ details:not([open]) summary span {
 figure img {
   max-width: 30dvh;
   border-radius: 10px;
+}
+
+.desc {
+  flex: 1;
 }
 
 #gallery {
